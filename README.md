@@ -121,15 +121,16 @@ is to have one at all. Doing the following was tested by @consideRatio
 
    1. Install [`rbenv`](https://github.com/rbenv/rbenv#installation).
    1. Install the [rbenv-build plugin](https://github.com/rbenv/ruby-build#installation) to allows you to use `rbenv install`.
-   1. Run `rbenv install <version>` with the [latest stable version](https://www.ruby-lang.org/en/downloads/).
+   1. Run `rbenv install <version>` with the [latest stable version](https://www.ruby-lang.org/en/downloads/) (or run `rbenv install -l` to see a list of versions).
    1. Run `rbenv global <version>`.
-   1. Verify you can run `ruby -v` and `gem -v`.
+   1. Verify you can run `ruby -v` and `gem -v` and check the version matches the latest install (if not, check your `$PATH`).
    1. Run `gem install bundler` to work with Gemfiles etc.
 
 1. Install Jekyll.
 
-   1. Checkout the `gh-pages` branch with `git checkout gh-pages`.
-   1. Run `bundle install`
+   1. Checkout the `gh-pages` branch with `git checkout gh-pages`. 
+   1. Run `bundle init` to generate the Gemfile and then `bundle install` to install the dependencies defined in the Gemfile
+   1. Install Jekyll using `bundle add jekyll` 
 
 1. Start a local webserver.
 
